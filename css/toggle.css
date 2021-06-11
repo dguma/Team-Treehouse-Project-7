@@ -1,0 +1,85 @@
+/* CSS Document */
+.toggleSwitchContainer {
+	margin: 2em 0;
+}
+
+.email, .public {
+	display: flex;
+	justify-content: space-between;
+	padding: .25em;
+}
+
+/*
+.public {
+	margin-top: .6em;
+}
+*/
+
+.switch {
+	position: relative;
+	display: inline-block;
+	width: 5.6em;
+	height: 1.6em;
+/*	margin-right: 1em;*/
+}
+
+.switch input {
+	opacity: 0;
+	width: 0;
+	height: 0;
+}
+
+.slider {
+	position: absolute;
+	cursor: pointer;
+	top: 0;
+	left: 0;
+	right: 0;
+	bottom: 0;
+	background-color: #ccc;
+	transition: .4s;
+	border-radius: 34px;
+	display: flex;
+	justify-content: space-around;
+	align-content: center;
+	text-transform: uppercase;
+	font-weight: 600;
+	color: white;
+}
+
+.slider:before {
+	position: absolute;
+	content: "";
+	height: 1.1em;
+	width: 1.1em;
+	left: 4px;
+	bottom: 4px;
+	background-color: white;
+	transition: .4s;
+	border-radius: 50%;
+}
+
+.on {
+	visibility: hidden;
+}
+
+
+input:checked + .slider {
+	background-color: #7377BF;
+}
+
+input:checked + .slider .off {
+	visibility: hidden;
+}
+
+input:checked + .slider .on {
+	visibility: visible;
+}
+
+input:focus + .slider {
+	box-shadow: 0 0 1px #7377BF;
+}
+
+input:checked + .slider:before {
+	transform: translateX(4em);
+}
