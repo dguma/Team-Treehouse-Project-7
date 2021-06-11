@@ -6,6 +6,10 @@
 	
 }
 
+canvas {
+  max-width: 100%;
+}
+
 html, body {
 /*	border: red solid;*/
 /*	overflow-x: hidden;*/
